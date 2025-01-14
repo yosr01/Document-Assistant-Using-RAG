@@ -2,4 +2,4 @@ faiss-cpu
 sentence-transformers
 langchain
 torch
-
+nltk

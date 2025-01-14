@@ -1,6 +1,11 @@
 import os
 import re
 import pdfplumber
+import nltk
+from nltk.corpus import stopwords
+
+# Download the French stopwords list (if not already downloaded)
+nltk.download('stopwords')
 
 def preprocess_document(input_file, output_dir):
     with pdfplumber.open(input_file) as pdf:
@@ -15,9 +20,6 @@ def preprocess_document(input_file, output_dir):
         text = re.sub(r"Pensez à actualiser.*?HAL-CNRS\.", "", text, flags=re.DOTALL)
         text = re.sub(r"Traitements effectués.*?Conseil constitutionnel,", "", text, flags=re.DOTALL)
         text = re.sub(r"p\.\d+\s+Code civil", "", text, flags=re.MULTILINE)
-
-        # Remove table of contents, including Titre, Sous-titre, Paragraphe, etc.
-        # text = re.sub(r"(?i)(Titre|Sous-titre|Chapitre|Section|Paragraphe|Sous-Sous-Sous-Sous-Sous-Sous-Sous-Sous-Sous-Sous-Paragraphe)\s+[^\n]*\s*(\d{1,4})?[\.\-]*", "", text, flags=re.DOTALL)
 
         # Remove page number references (e.g., . . . 268, 304, etc.)
         text = re.sub(r"\.+\s*\d+", "", text)
@@ -45,11 +47,19 @@ def preprocess_document(input_file, output_dir):
     # Remove the individual identifiers as separate markers and combine them into one block
     cleaned_text = re.sub(combined_pattern, "COMBINED_IDENTIFIER_BLOCK ", cleaned_text)
 
+    # Remove French stopwords
+    stop_words = set(stopwords.words('french'))
+    words = cleaned_text.split()
+    filtered_words = [word for word in words if word.lower() not in stop_words]
+
+    # Join the filtered words back into a cleaned text string
+    cleaned_text = " ".join(filtered_words)
+
     # Split the text into parts based on the combined block identifier
     law_parts = cleaned_text.split("COMBINED_IDENTIFIER_BLOCK")
     law_parts = [part.strip() for part in law_parts if part.strip()]
 
-    # Create a chunk for each law
+    # Create chunks
     os.makedirs(output_dir, exist_ok=True)
     for i, content in enumerate(law_parts):
         file_path = os.path.join(output_dir, f"chunk_{i}.txt")
