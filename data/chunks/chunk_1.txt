@@ -1,9 +1,17 @@
-Open Science Juridique avec une incitation au dépôt du texte intégral en accès ouvert
-des articles de doctrine venant du monde professionnel (Grande Bibliothèque du Droit) et
-universitaire (HAL-CNRS).
-l’Assemblée Nationale, et le Sénat.
-Avec l'aide de:
-Habett La Loi des Ours
-Permet de voir l'article sur legifrance
-Permet de retrouver l'article dans le plan
-Permet de lancer une recherche de jurisprudence Cassation sur Judilibre
+Les lois et, lorsqu'ils sont publiés au Journal officiel de la République française, les actes administratifs entrent
+en vigueur à la date qu'ils fixent ou, à défaut, le lendemain de leur publication. Toutefois, l'entrée en vigueur de
+celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée
+en vigueur de ces mesures.
+En cas d'urgence, entrent en vigueur dès leur publication les lois dont le décret de promulgation le prescrit et
+les actes administratifs pour lesquels le Gouvernement l'ordonne par une disposition spéciale.
+Les dispositions du présent article ne sont pas applicables aux actes individuels.
+Ressources
+> Éléments d'appréciation et fixation de la prestation compensatoire (fr) - La GBD
+> Les modes de saisine du JAF
+> Le régime des mesures provisoires (fr) - La GBD
+> La protection du logement des époux constitutif du domicile conjugal (fr) - La GBD
+> La protection du logement conjugal (fr) - La GBD
+Circulaires et Instructions
+> INSTRUCTION N° 12820/ARM/SGA relative au Bulletin officiel des armées.
+> INSTRUCTION N° 9278/DEF/SGA/DAJ/D2P fixant la procédure d'élaboration des textes réglementaires relatifs à l'organisation et aux attributions du ministère de la défense.
+2

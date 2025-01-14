@@ -1,5 +1,11 @@
-Permet de lancer une recherche de jurisprudence judiciaire en appel sur Judilibre
-Permet de lancer une recherche de jurisprudence administrative sur legifrance
-Permet de lancer une recherche de jurisprudence française sur Juricaf
-Vous pouvez contribuer en proposant des liens vers le texte intégral ouvert d’articles de doctrine relatifs au contenu
-de chaque code (article, chapitre, section) en utilisant ce formulaire (https://droit.org/form.html). Ces liens seront ensuite
+La loi ne dispose que pour l'avenir ; elle n'a point d'effet rétroactif.
+Récemment au Bulletin de la Cour de Cassation
+> Chambre sociale, 13 Janvier 2021, n°19-20.736, (B) [ ECLI:FR:CCASS:2021:SO00076 ]
+> Civ., 20 avril 2023, n° 21-23.712, (B), FRH [ ECLI:FR:CCASS:2023:C200423 ]
+> Civ., 23 mars 2022, n° 20-17.663, (B), FRH [ ECLI:FR:CCASS:2022:C100267 ]
+> Civ., 9 février 2022, n° 21-10.388, (B), FS [ ECLI:FR:CCASS:2022:C300134 ]
+> Civ., 12 mai 2021, n° 20-14.992 (P) [ ECLI:FR:CCASS:2021:C200423 ]
+> Civ., 26 novembre 2020, n° 19-11.501 (P) [ ECLI:FR:CCASS:2020:C201281 ]
+Dictionnaire du Droit privé
+> Rétroactif
+3
