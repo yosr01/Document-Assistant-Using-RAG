@@ -4,7 +4,7 @@ This project implements a chat application that uses a RAG system with the pre-t
 
 ## Prerequisites
 Before starting, make sure you have installed the required libraries. You can install the dependencies using `requirements.txt`.
-**Installer les dépendances** :
+
     ```bash
     pip install -r requirements.txt
     ```
@@ -25,7 +25,7 @@ Before starting, make sure you have installed the required libraries. You can in
     To start the application, run the following command in your terminal: :
    
     ```bash
-    python -m streamlit run chat.py
+    python -m streamlit run generation.py
     ```
     
     This will launch your browser and you'll be all set to start chatting with the bot about French laws!
