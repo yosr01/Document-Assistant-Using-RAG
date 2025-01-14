@@ -2,10 +2,9 @@
 
 This project implements a chat application that uses a RAG system with the pre-trained **Mistral-7B** model and an interactive user interface built using **Streamlit**.
 
+
 ## Prerequisites
-
-    Before starting, make  sure you have installed the required libraries. You can install the dependencies using :
-
+Before starting, make  sure you have installed the required libraries. You can install the dependencies using :
     ```bash
     pip install -r requirements.txt
     ```
@@ -26,8 +25,9 @@ This project implements a chat application that uses a RAG system with the pre-t
     To start the application, run the following command in your terminal:
    
     ```bash
-    python -m streamlit run scripts/generation.py
+    streamlit run scripts/generation.py
     ```
+    
     
     This will launch your browser and you'll be all set to start chatting with the bot about French laws!
 

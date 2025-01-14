@@ -4,7 +4,7 @@ from preprocess import preprocess_document
 from embedding import create_embeddings
 from retrieve import retrieve_chunks
 
-api_key = 'Api_key'
+api_key = 'INSERT_API_KEY'
 model_name = 'mistralai/Mistral-7B-Instruct-v0.3'
 client = InferenceClient(model=model_name, token=api_key)
 
@@ -56,7 +56,12 @@ else:
 
         assistant_response = result if isinstance(result, str) else "Désolé, je n'ai pas pu générer une réponse."
 
-        with st.chat_message("assistant"):
-            st.markdown(assistant_response)
+        # Clean the response to remove any formatting that might appear as a code block
+        assistant_response_cleaned = assistant_response.replace("```", "")  # Remove code block backticks if present
+        assistant_response_cleaned = assistant_response_cleaned.replace("<s>[INST]", "").replace("[/INST]", "")  # Clean instruction tags if present
 
-        st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+        # Use st.text() to display the response as plain text
+        with st.chat_message("assistant"):
+            st.text(assistant_response_cleaned)  # Displaying it as plain text
+
+

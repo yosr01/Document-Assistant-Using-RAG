@@ -1,20 +1,21 @@
-import faiss
+import chromadb
 from sentence_transformers import SentenceTransformer
 
-def retrieve_chunks(query, index_file, chunk_dir, top_k=10):
+def retrieve_chunks(query, db_collection_name, top_k=5):
+    # Initialize ChromaDB client
+    client = chromadb.Client()
+    collection = client.get_or_create_collection(db_collection_name)
+
     model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
-    index = faiss.read_index(index_file)
     query_embedding = model.encode([query])
-    distances, indices = index.search(query_embedding, top_k)
-    chunks = []
-    for idx in indices[0]:
-        if idx == -1:
-            continue
-        chunk_file = f"{chunk_dir}/chunk_{idx}.txt"
-        with open(chunk_file, 'r', encoding='utf-8') as file:
-            chunks.append(file.read())
-    
+
+    # Query ChromaDB for the top K closest results
+    results = collection.query(
+        query_embeddings=query_embedding.tolist(),  
+        n_results=top_k 
+    )
+
+    # Retrieve the corresponding chunks
+    chunks = results['documents']
+
     return chunks
-
-
-        
