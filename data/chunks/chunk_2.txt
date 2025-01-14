@@ -1,0 +1,5 @@
+Permet de lancer une recherche de jurisprudence judiciaire en appel sur Judilibre
+Permet de lancer une recherche de jurisprudence administrative sur legifrance
+Permet de lancer une recherche de jurisprudence française sur Juricaf
+Vous pouvez contribuer en proposant des liens vers le texte intégral ouvert d’articles de doctrine relatifs au contenu
+de chaque code (article, chapitre, section) en utilisant ce formulaire (https://droit.org/form.html). Ces liens seront ensuite
