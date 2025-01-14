@@ -16,11 +16,11 @@ Before starting, make sure you have installed the required libraries. You can in
     - Click on your profile in the top right corner then navigate to **Settings -> Access Tokens** and generate a new API key
 
 2. **Add the API key to the code** :
-    Open the  `generation.py` file (stored under /scripts) and insert your API key in the designated place (line 8) :
+    Open the  `generation.py` file (stored under /scripts) and insert your API key in the designated place (line 7) :
     
-        ```python
-        api_key = 'INSERT_API_KEY'
-        ```
+    ```python
+    api_key = 'INSERT_API_KEY'
+    ```
 3. **Running the project** :
     To start the application, run the following command in your terminal: :
    
