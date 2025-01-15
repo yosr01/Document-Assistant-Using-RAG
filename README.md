@@ -26,9 +26,18 @@ This project implements a chat application that uses a RAG system with the pre-t
     To start the application, run the following command in your terminal:
    
     ```bash
-    streamlit run scripts/generation.py
+    streamlit run scripts/generation.py 
     ```
-    
+    or use docker 
+     
+    ```bash
+    docker build -t app .
+    ```
+    and 
+
+    ```bash
+    docker run -p 8501:8501 app
+    ```
     
     This will launch your browser and you'll be all set to start chatting with the bot about French laws!
 
